@@ -27,6 +27,6 @@ public class RegistrationController {
      public void signUp(){
          System.out.println("Для регистрации введите логин и пароль.");
          String data = scanner.nextLine();
-         boolean isCompleted = UserService.signUp(data);
+
      }
 }

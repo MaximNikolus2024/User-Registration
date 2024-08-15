@@ -1,7 +1,5 @@
 package service;
 
-import datasafe.UserDataSafe;
-
 //public class UserServiceImpl implements UserService{
 
    // private UserDataSafe userDataSafe;

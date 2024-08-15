@@ -1,19 +1,14 @@
 package service;
 
-//public class UserServiceImpl implements UserService{
+import repository.UserRepository;
 
-   // private UserDataSafe userDataSafe;
+public class UserServiceImpl implements UserService {
 
-   // public UserServiceImpl(UserDataSafe userDataSafe) {
-    //    this.userDataSafe = userDataSafe;
-   // }
-
-    //@Override
-  //  public boolean signUp(String data) {
-  //      if (data == null){
-   //         return false;
-       // }
+    private UserRepository userRepository;
 
 
-  //  }
-//}
+    @Override
+    public boolean validate(String login, String password) {
+        return false;
+    }
+}

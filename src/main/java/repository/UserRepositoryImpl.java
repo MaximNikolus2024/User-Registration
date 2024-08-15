@@ -1,17 +1,17 @@
-package datasafe;
+package repository;
 
 import entity.User;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserDataSafeImpl implements UserDataSafe {
+public class UserRepositoryImpl implements UserRepository {
     private final Map<String, User> usersDatabase = new HashMap<>();
 
 
     @Override
-    public boolean isUsername(String username) {
-        return usersDatabase.containsKey(username);
+    public boolean isUsername(String login) {
+        return usersDatabase.containsKey(login);
         /**добавляет объект user в мапу usersDatabase заменяя старое значение на новое*/
 
     }
@@ -23,8 +23,8 @@ public class UserDataSafeImpl implements UserDataSafe {
     }
 
     @Override
-    public User getUserByUsername(String username) {
-        return usersDatabase.get(username);
+    public User getUserByUsername(String login) {
+        return usersDatabase.get(login);
         /**Эта строка кода возвращает объект User, связанный с указанным именем пользователя, из базы данных usersDatabase.*/
     }
 }

@@ -9,17 +9,19 @@ private Scanner scanner;
         try {
             System.out.println("1. Регистрация\n2. Авторизация");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+
+          String choice = scanner.nextLine();
 
             System.out.print("Введите имя пользователя: ");
-            String login = scanner.nextLine();
+            String userName = scanner.nextLine();
             System.out.println("Введите пароль: ");
             String password = scanner.nextLine();
+          UserCommand userCommand = UserCommand.valueOf(choice);
+          switch (userCommand){
 
-            switch (choice = 1){
-                case
-            }
+          }
+        } catch (Exception e) {
+            System.out.println("Произошла ошибка: " + e.getMessage());
         }
 
 

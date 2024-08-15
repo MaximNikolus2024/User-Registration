@@ -3,18 +3,18 @@ package entity;
 import java.util.Objects;
 
 public class User {
-    private String userName;
+    private String login;
     private String password;
 
     public User(String userName, String password) {
-        this.userName = userName;
+        this.login = userName;
         this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
+                "userName='" + login + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
@@ -24,20 +24,20 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(userName, user.userName) && Objects.equals(password, user.password);
+        return Objects.equals(login, user.login) && Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, password);
+        return Objects.hash(login, password);
     }
 
     public String getUserName() {
-        return userName;
+        return login;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.login = userName;
     }
 
     public String getPassword() {

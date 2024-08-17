@@ -1,6 +1,19 @@
 package service;
 
-public interface UserService {
-    boolean validate(String login, String password);
+import entity.User;
 
+public interface UserService {
+
+    boolean isUserExists(String login);
+
+    void saveUser(User user);
+
+    User getUserByUsername(String login);
+
+    boolean isValidPassword(String password);
+
+    String encryptPassword(String password);
 }
+
+
+

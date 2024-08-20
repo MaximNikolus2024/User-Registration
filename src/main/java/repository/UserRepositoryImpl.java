@@ -13,19 +13,17 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public boolean isUserExists(String login) {
-        return usersDatabase.containsKey(login);
+        return false;
     }
 
     @Override
     public void saveUser(User user) {
-        usersDatabase.put(user.getLogin(), user);
+
     }
 
     @Override
     public User getUserByUsername(String login) {
-        return usersDatabase.get(login);
-
-
-    }}
-
+        return null;
+    }
+}
 

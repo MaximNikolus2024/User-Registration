@@ -10,20 +10,18 @@ public class UserRepositoryImpl implements UserRepository {
     private final Map<String, User> usersDatabase = new HashMap<>();
 
 
-
     @Override
     public boolean isUserExists(String login) {
-        return false;
+        return usersDatabase.containsKey(login);
     }
 
     @Override
     public void saveUser(User user) {
-
+    usersDatabase.put(user.getLogin(), user);
     }
 
     @Override
     public User getUserByUsername(String login) {
-        return null;
+        return usersDatabase.get(login);
     }
 }
-

@@ -37,7 +37,7 @@ class UserServiceImplTest {
         // Проверяем, что хеш имеет длину 64 символа
         assertEquals(64, encryptedPassword.length(), "Хеш должен быть длиной 64 символа");
 
-        assertEquals("SHA-256", "SHA-256"); //Хеш должен соответствовать алгоритму SHA-256
+
     }
 
     @Test
